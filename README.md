@@ -26,11 +26,11 @@ It requires 2 neccessary arguments to work.
 >> hasher.py -p [Password] -f [Hash Function]
 ```
 #### Supported Hash Types
-1. <b>MD5</b> [md5]
-2. <b>SHA-1</b> [sha1]
-3. <b>SHA-256</b> [sha256]
-4. <b>SHA-384</b> [sha384]
-5. <b>SHA-512</b> [sha512]
+1. **md5**
+2. **sha1**
+3. **sha256** 
+4. **sha384**
+5. **sha512**
 
 #### Example
 ```
