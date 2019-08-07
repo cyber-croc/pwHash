@@ -39,28 +39,28 @@ elif hash_type == 'sha1':
     print("\nSHA-1:")
     for i in range(1):
         passw = bytes(password, 'utf-8')
-        hashh = hashlib.md5(passw).hexdigest()
+        hashh = hashlib.sha1(passw).hexdigest()
         print(good(hashh))
 
 elif hash_type == 'sha256':
     print("\nSHA-256:")
     for i in range(1):
         passw = bytes(password, 'utf-8')
-        hashh = hashlib.md5(passw).hexdigest()
+        hashh = hashlib.sha256(passw).hexdigest()
         print(good(hashh))
 
 elif hash_type == 'sha384':
     print("\nSHA-384:")
     for i in range(1):
         passw = bytes(password, 'utf-8')
-        hashh = hashlib.md5(passw).hexdigest()
+        hashh = hashlib.sha384(passw).hexdigest()
         print(good(hashh))
 
 elif hash_type == 'sha512':
     print("\nSHA-512:")
     for i in range(1):
         passw = bytes(password, 'utf-8')
-        hashh = hashlib.md5(passw).hexdigest()
+        hashh = hashlib.sha512(passw).hexdigest()
         print(good(hashh))
 
 
