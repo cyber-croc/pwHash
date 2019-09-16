@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://github.com/cyber-croc/pwHash"><img src="https://i.imgur.com/Y2qa0Hq.jpg" width="200px height="200px""></a>
+  <a href="https://github.com/darealzane/pwHash"><img src="https://i.imgur.com/Y2qa0Hq.jpg" width="200px height="200px""></a>
   <br>
   pwHash
   <br>
@@ -10,7 +10,7 @@
 
 ### Installation
 ```
->> git clone https://github.com/cyber-croc/pwHash.git
+>> git clone https://github.com/darealzane/pwHash.git
 
 >> cd pwHash
 
