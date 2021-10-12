@@ -1,41 +1,23 @@
-<h1 align="center">
-  <br>
-  <a href="https://github.com/darealzane/pwHash"><img src="https://i.imgur.com/Y2qa0Hq.jpg" width="200px height="200px""></a>
-  <br>
-  pwHash
-  <br>
-</h1>
+# pwHash
+## _Generate hashes from strings._
 
-<h4 align="center">Simple Password Hash Generator</h4>
+Generate password hashes from strings in python3.
 
-### Installation
+## Installation & Usage
+
+**Installation**
 ```
->> git clone https://github.com/darealzane/pwHash.git
-
->> cd pwHash
-
->> pip install -r requirements.txt
-
->> python hasher.py
+git clone https://github.com/zanesense/pwHash.git Hasher
+cd Hasher
+pip install -r requirements.txt
 ```
 
-### Usage
-It requires 2 neccessary arguments to work.
+**Usage**
+```
+python3 hasher.py -p [String] -f [Hash Function]
+```
+> Supported hash functions include *md5, sha-1, sha-256, sha-384 & sha-512*
 
-```
->> hasher.py -p [Password] -f [Hash Function]
-```
-#### Supported Hash Types
-1. **md5**
-2. **sha1**
-3. **sha256** 
-4. **sha384**
-5. **sha512**
-
-#### Example
-```
->> hasher.py -p 12345 -f md5
-
-MD5:
-[+] a6bb4faacdff9dcdcb6f6e22bc51eac9
-```
+<image src=https://i.imgur.com/hGoU6VJ.gif><image>
+  
+<image src=https://img.shields.io/github/repo-size/zanesense/pwHash>
