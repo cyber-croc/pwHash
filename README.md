@@ -81,9 +81,3 @@ zaneee
 
 Feel free to contribute to this project by submitting issues or pull requests. Any help is appreciated!
 ```
-
-### Notes:
-- **File Name Change**: Updated all references to the Python file to `hasher.py`.
-- **GitHub Repository URL**: Ensure to replace `https://github.com/yourusername/password-hasher.git` with your actual repository URL.
-
-This `README.md` should now match the naming of the Python script file and provide clear instructions for users.
