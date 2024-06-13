@@ -1,4 +1,4 @@
-# pwHash
+# pyhash
 
 ![Python](https://img.shields.io/badge/python-v3.7%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -50,8 +50,8 @@ python3 hasher.py -i
 1. Clone the repository:
 
     ```sh
-    git clone https://github.com/zanesense/hasher.git
-    cd pwHash
+    git clone https://github.com/zanesense/pyhash.git
+    cd pyhash
     ```
 
 2. Install the required dependencies:
