@@ -50,8 +50,8 @@ python3 hasher.py -i
 1. Clone the repository:
 
     ```sh
-    git clone https://github.com/yourusername/password-hasher.git
-    cd password-hasher
+    git clone https://github.com/zanesense/hasher.git
+    cd pwHash
     ```
 
 2. Install the required dependencies:
