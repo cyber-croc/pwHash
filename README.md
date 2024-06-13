@@ -1,4 +1,4 @@
-# Password Hasher
+# pwHash
 
 ![Python](https://img.shields.io/badge/python-v3.7%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
