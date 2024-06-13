@@ -1,73 +1,67 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
 
-#!usr/bin/python3
-#!-*- coding: utf-8 -*-
-
-# Password Hasher by cybercroc.
-# generate hashes from passwords in seconds!!
-
-# import the required libraries.
 import hashlib
 import argparse
 import os
 import sys
 from huepy import *
 
-# making command-line arguments.
 parser = argparse.ArgumentParser()
 parser.add_argument('-p', help='password to hash', dest='passw')
 parser.add_argument('-f', help='hash function', dest='function')
+parser.add_argument('-i', help='interactive mode', action='store_true', dest='interactive')
 args = parser.parse_args()
 
-# clear the console.
 os.system('clear')
 
-# C O D E  S T A R T
+def hash_password(password, hash_type):
+    if hash_type == 'md5':
+        return hashlib.md5(password).hexdigest()
+    elif hash_type == 'sha1':
+        return hashlib.sha1(password).hexdigest()
+    elif hash_type == 'sha256':
+        return hashlib.sha256(password).hexdigest()
+    elif hash_type == 'sha384':
+        return hashlib.sha384(password).hexdigest()
+    elif hash_type == 'sha512':
+        return hashlib.sha512(password).hexdigest()
+    else:
+        return None
 
-# variables
-password = args.passw
-hash_type = args.function
+if args.interactive:
+    password = input(que("Enter the password to hash: "))
+    print(que("Choose the hash function:"))
+    print(info("1. md5"))
+    print(info("2. sha1"))
+    print(info("3. sha256"))
+    print(info("4. sha384"))
+    print(info("5. sha512"))
+    choice = input(que("Enter the number corresponding to your choice: "))
+    hash_type = {
+        '1': 'md5',
+        '2': 'sha1',
+        '3': 'sha256',
+        '4': 'sha384',
+        '5': 'sha512'
+    }.get(choice)
 
-# if/else statements.
-if hash_type == 'md5':
-    print("\nMD5:")
-    for i in range(1):
-        passw = bytes(password, 'utf-8')
-        hashh = hashlib.md5(passw).hexdigest()
-        print(good(hashh))
-
-elif hash_type == 'sha1':
-    print("\nSHA-1:")
-    for i in range(1):
-        passw = bytes(password, 'utf-8')
-        hashh = hashlib.sha1(passw).hexdigest()
-        print(good(hashh))
-
-elif hash_type == 'sha256':
-    print("\nSHA-256:")
-    for i in range(1):
-        passw = bytes(password, 'utf-8')
-        hashh = hashlib.sha256(passw).hexdigest()
-        print(good(hashh))
-
-elif hash_type == 'sha384':
-    print("\nSHA-384:")
-    for i in range(1):
-        passw = bytes(password, 'utf-8')
-        hashh = hashlib.sha384(passw).hexdigest()
-        print(good(hashh))
-
-elif hash_type == 'sha512':
-    print("\nSHA-512:")
-    for i in range(1):
-        passw = bytes(password, 'utf-8')
-        hashh = hashlib.sha512(passw).hexdigest()
-        print(good(hashh))
-
-
+    if not hash_type:
+        print(bad('Invalid choice!'))
+        sys.exit()
 else:
-    print()
-    print(bad('Invalid Hash Type!!'))
-    print(info('Supported Hashes : md5/sha1/sha256/sha384/sha512'))
+    password = args.passw
+    hash_type = args.function
+
+if not password or not hash_type:
+    print(bad('Password and hash type are required!'))
     sys.exit()
 
-# C O D E  E N D
+passw = bytes(password, 'utf-8')
+hashed_password = hash_password(passw, hash_type)
+
+if hashed_password:
+    print(good(f"\n{hash_type.upper()}: {hashed_password}"))
+else:
+    print(bad('Invalid Hash Type!!'))
+    print(info('Supported Hashes : md5/sha1/sha256/sha384/sha512'))
