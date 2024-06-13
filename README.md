@@ -4,7 +4,7 @@
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Maintenance](https://img.shields.io/badge/maintained-yes-brightgreen)
 
-Password Hasher by cybercroc generates hashes from passwords in seconds!!
+Generate hashes from passwords in seconds!!
 
 ## Features
 
