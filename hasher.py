@@ -31,13 +31,16 @@ def hash_password(password, hash_type):
 
 if args.interactive:
     password = input(que("Enter the password to hash: "))
+    print()
     print(que("Choose the hash function:"))
+    print()
     print(info("1. md5"))
     print(info("2. sha1"))
     print(info("3. sha256"))
     print(info("4. sha384"))
     print(info("5. sha512"))
-    choice = input(que("Enter the number corresponding to your choice: "))
+    print()
+    choice = input(que("Choose an option(1-5): "))
     hash_type = {
         '1': 'md5',
         '2': 'sha1',
@@ -61,7 +64,8 @@ passw = bytes(password, 'utf-8')
 hashed_password = hash_password(passw, hash_type)
 
 if hashed_password:
-    print(good(f"\n{hash_type.upper()}: {hashed_password}"))
+    print()
+    print(good(f"{hash_type.upper()}: {hashed_password}"))
 else:
     print(bad('Invalid Hash Type!!'))
     print(info('Supported Hashes : md5/sha1/sha256/sha384/sha512'))
